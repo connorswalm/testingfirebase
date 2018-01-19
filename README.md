@@ -1,6 +1,5 @@
 # testingfirebase
 relearning firebase functionality
-i asdlkfjsdlkfj;kdlaslkdfj
 
 
 
