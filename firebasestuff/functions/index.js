@@ -11,7 +11,7 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 });
 
 
-exports.log = functions.database.ref('/forminfo').onWrite(  event => { 
+exports.log = functions.database.ref('/forminfo').onCreate(  event => { 
 
   var thedata = event.data.val();
   console.log(thedata);
