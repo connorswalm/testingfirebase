@@ -10,3 +10,13 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
   response.send("Hello from Firebase!");
 });
 
+
+exports.log = functions.database.ref('/forminfo').onWrite(  event => { 
+
+  var thedata = event.data.val();
+  console.log(thedata);
+
+  return 0
+});
+
+

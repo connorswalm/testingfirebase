@@ -16,36 +16,27 @@ function addDB() {
 
 function addNames(){
   
-  var rootref = firebase.database().ref();
-  var formref = rootref.child('forminfo');
+  var formref = firebase.database().ref().child('forminfo');
   /*
   formref.once('value').then(snap => {
     let val = snap.val()
     console.log(val);
   });
   */
-
+  
   var theform = document.getElementById("forminfo_name");
  
-  //
-  // Creates a unique id and makes a child key-value pair under it with name:
-  // theform.value
-  //
   
-  formref.push().set({
+  var newid = formref.push();
+  var key = newid.key;
+
+  console.log(key);
+  
+  newid.set({
     name: theform.value
   });
-
-  //console.log(theform.value);
-  //console.log(formref);
-
-  //
-  // clear the form so there is a new submit
-  //
   
   theform.value = '';
-  
-
 };
 
 
