@@ -11,10 +11,22 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 });
 
 
-exports.log = functions.database.ref('/forminfo').onCreate(  event => { 
+exports.log = functions.database.ref('/forminfo/{uid}').onCreate(  event => { 
 
   var thedata = event.data.val();
-  console.log(thedata);
+
+    console.log(thedata);
+
+  return 0
+});
+
+
+exports.infolog = functions.database.ref('/forminfo/').onUpdate(  event => { 
+
+  var thedata = event.data.val();
+
+    console.log(thedata.toString() + "This is info test");
+    
 
   return 0
 });

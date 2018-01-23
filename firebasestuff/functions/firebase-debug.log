@@ -1,0 +1,45 @@
+[debug] [2018-01-22T17:42:04.585Z] ----------------------------------------------------------------------
+[debug] [2018-01-22T17:42:04.588Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only functions,hosting
+[debug] [2018-01-22T17:42:04.588Z] CLI Version:   3.17.3
+[debug] [2018-01-22T17:42:04.588Z] Platform:      darwin
+[debug] [2018-01-22T17:42:04.588Z] Node Version:  v8.9.4
+[debug] [2018-01-22T17:42:04.588Z] Time:          Mon Jan 22 2018 12:42:04 GMT-0500 (EST)
+[debug] [2018-01-22T17:42:04.588Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-22T17:42:04.605Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-22T17:42:04.605Z] > authorizing via signed-in user
+[debug] [2018-01-22T17:42:04.607Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/web-project-5d213  
+  
+ Mon Jan 22 2018 12:42:04 GMT-0500 (EST)
+[debug] [2018-01-22T17:42:05.133Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-22T17:42:05.134Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/web-project-5d213/tokens  
+  
+ Mon Jan 22 2018 12:42:05 GMT-0500 (EST)
+[debug] [2018-01-22T17:42:05.740Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/connorswalm/codingpen/testingfirebase/firebasestuff'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-01-22T17:42:06.693Z] Fetching environment
+[debug] [2018-01-22T17:42:06.696Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/web-project-5d213  
+  
+ Mon Jan 22 2018 12:42:06 GMT-0500 (EST)
+[debug] [2018-01-22T17:42:06.697Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/web-project-5d213/apiKeys  
+  
+ Mon Jan 22 2018 12:42:06 GMT-0500 (EST)
+[debug] [2018-01-22T17:42:06.697Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/web-project-5d213  
+  
+ Mon Jan 22 2018 12:42:06 GMT-0500 (EST)
+[debug] [2018-01-22T17:42:06.964Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-22T17:42:06.980Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-22T17:42:06.981Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/497218675608/clients/_:getWebAppConfig  
+  
+ Mon Jan 22 2018 12:42:06 GMT-0500 (EST)
+[debug] [2018-01-22T17:42:07.080Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-22T17:42:07.081Z] Starting @google-cloud/functions-emulator
+[debug] [2018-01-22T17:42:07.239Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-01-22T17:42:09.403Z] Parsing function triggers
+[info] ✔  functions: helloWorld: http://localhost:5001/web-project-5d213/us-central1/helloWorld
