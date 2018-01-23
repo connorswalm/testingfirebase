@@ -14,7 +14,7 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 exports.log = functions.database.ref('/forminfo/{uid}').onCreate(  event => { 
 
   var thedata = event.data.val();
-
+    console.log(event);
     console.log(thedata);
 
   return 0
@@ -23,10 +23,23 @@ exports.log = functions.database.ref('/forminfo/{uid}').onCreate(  event => {
 
 exports.infolog = functions.database.ref('/forminfo/').onUpdate(  event => { 
 
-  var thedata = event.data.val();
+  var thedata = event.data._delta;
+ // var thejson = event.data.toJSON();
 
-    console.log(thedata.toString() + "This is info test");
-    
+    console.log(thedata);
+    console.log(thejson);
+   
+   // console.log(Object.keys(thedata)[0] + " is it working yest");
+  
+  var thekey = Object.keys(thedata)[0];
+  console.log(typeof thekey)
+  
+  var objectref = functions.database.ref('/forminfo/' + thekey);
+  objectref.set({
+  
+    test: "tested yo",
+  });
+
 
   return 0
 });
