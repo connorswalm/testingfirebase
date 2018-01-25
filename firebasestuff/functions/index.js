@@ -27,15 +27,20 @@ exports.infolog = functions.database.ref('/forminfo/').onUpdate(  event => {
  // var thejson = event.data.toJSON();
 
     console.log(thedata);
-    console.log(thejson);
-   
+    //console.log(thejson);
+   console.log(event.data);
    // console.log(Object.keys(thedata)[0] + " is it working yest");
   
   var thekey = Object.keys(thedata)[0];
-  console.log(typeof thekey)
+  console.log(typeof thekey);
+  console.log(thekey);
   
-  var objectref = functions.database.ref('/forminfo/' + thekey);
-  objectref.set({
+  //var objectref = functions.database.ref('/handled_forms/').push();
+  var eventref = event.data.ref.parent.child('/handled_forms/').push();
+
+  console.log(eventref);
+
+  eventref.set({
   
     test: "tested yo",
   });
